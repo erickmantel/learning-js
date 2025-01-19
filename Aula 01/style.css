@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Ajuste a altura conforme necessário */
+}
+.titulo{
+    
+}
+.texto-esquerda,
+.texto-direita {
+    flex: 1;
+    padding: 20px;
+}
+
+.imagem {
+    max-width: 300px; /* Ajuste a largura máxima da imagem */
+}

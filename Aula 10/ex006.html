@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evendtos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;/*Altura*/
+            height: 200px;/*Largura*/
+            line-height: 200px;/*Para texto ficar no meio do quadrado verde*/
+            text-align: center;
+        }
+        .imagem {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px; /* Adiciona cantos arredondados */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+        }
+    </style>
+</head>
+<body>
+    <div id="area" ondblclick="dbclick()"> 
+        <!--evento de click no js atribuido a div com id area-->
+        Interajaaaa...
+    </div>
+
+    <script>
+        var a = document.getElementById('area')//escopo "global" da variavel
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout',sair)
+        a.addEventListener('dbclick', dbclick)
+        function clicar(){          
+            a.innerText = 'Clicou!'
+            a.style.color = 'red'
+            a.style.background = 'gray'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.color = 'white'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+            a.style.color = 'white'
+        }
+        function dbclick(){
+            /*Criar uma imagem no meio da página, uma unica vez e ao clicar nela vai abrir umas mensagens conversando com o tux via alert.*/
+            var img = document.createElement('img');//Criar elemento img dinamicamente com js no html
+            img.src = 'tux.png';//Botar atributo no objeto 
+            img.classList.add('imagem');//Adiciona a classe para estilização
+            img.addEventListener('click', () => {
+                //uso de função anonima!
+                alert('Olá, eu sou Tux a mascote oficial do kernel Linux!');
+
+                });
+            //Inserir a imagem no corpo do documento
+            document.body.appendChild(img);
+        }
+    </script>       
+</body>
+</html>
