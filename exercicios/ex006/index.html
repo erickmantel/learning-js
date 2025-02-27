@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando dois números</title>
+    <style>
+        .body{font:12pt Arial;}
+        .buttonclass{padding: 30px; font-size: 15pt;}         
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <button class="buttonclass" onclick="somar()">Iniciar a soma</button>
+    <p id="res">O resultado vem aqui...</p>
+    <p id="tipo">Tipo da variavel aqui...</p>
+    <script>
+        function somar(){
+            
+            let n1 = Number(window.prompt('Digite um número: '))
+            let n2 = Number(window.prompt('Digite o segundo número: '))
+            let res = document.getElementById('res')
+            res.innerHTML = `A soma do ${n1} com ${n2} é igual á ${n1+n2}`
+            
+            
+            let tipo = document.getElementById('tipo')
+            tipo.innerHTML = `O <mark>n1</mark> é do tipo ${typeof n1} e o <mark>n2</mark> ${typeof n2}, use <strong>typeof</strong> para depurar os tipos de suas variaveis! &#128526;`; 
+
+        }
+    </script>
+</body>
+</html>

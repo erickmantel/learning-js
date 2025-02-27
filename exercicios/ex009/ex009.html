@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+    <style>
+        .titulo{
+            font-size: 2em; /* Tamanho do título */
+            margin-bottom: 20px; /* Espaçamento abaixo do título */
+        }
+        .butão{
+            font-size: 1.2em; /* Tamanho da fonte dos botões */
+            padding: 10px 20px; /* Espaçamento interno dos botões */
+            margin: 0 10px; /* Espaçamento entre os botões */
+            border: none; /* Remove bordas */
+            border-radius: 5px; /* Arredonda os cantos dos botões */
+            background-color: #007bff; /* Cor de fundo azul */
+            color: white; /* Cor do texto branco */
+            cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+        }
+    </style>
+    
+</head>
+<body>
+    
+<header>
+    <h1 class="titulo">Contador de Cliques</h1>
+</header>
+
+    <button class="butão" onclick="contar()">Clique em mim</button>
+    <button class="butão" onclick="zerar()">Zerar o contador</button>
+
+    <p id="res">O contador está com cliques</p>
+
+    
+    <script>
+        let contador = 0
+        function contar() {
+            contador ++
+
+            res.innerHTML = `O contador está com <mark>${contador}</mark> cliques.`
+        }
+
+        function zerar() {
+            contador = 0
+            res.innerHTML = `O contador está com <mark>${contador}</mark> cliques.`
+        }
+    </script>
+</body>
+</html>
+

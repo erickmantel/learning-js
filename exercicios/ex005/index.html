@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando números</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button{
+            padding: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="iniciar()">Clique para calcular</button>
+    <p id="resultado">Resultado será impresso aqui...</p>
+    <script>
+        alert('Seja bem-vindo(a) ao meu site!')
+        function iniciar(){
+           let n1 = Number(window.prompt('Digite um número:'))
+           let res = document.getElementById('resultado')
+           //seleção por id, primeiro acessa o elemento e dentro acessa o id
+           let dobro = n1 * 2
+           let metade = n1 / 2
+           res.innerHTML = `O dobro de ${n1} é ${dobro} e a metade é ${metade}!`
+
+        }
+    </script>
+</body>
+</html>
+

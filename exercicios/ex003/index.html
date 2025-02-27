@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o prompt() e o alert() juntos</title>
+    <style>
+        .button{font-size: 12pt; padding: 30px;}
+        .corpo{background-color: gray; font: 12pt Arial;}     
+   </style>
+</head>
+<body class="corpo">
+    <h1>Trabalhando com dados v1.0</h1>
+    <button class="button" onclick="entrada()">Clique para começar</button>
+
+    <script>
+        function entrada(){
+            var nome = prompt('Qual o seu nome?')
+            alert(`Olá, ${nome}! É um prazer em te conhecer!`)          
+        }
+    </script>
+</body>
+</html>

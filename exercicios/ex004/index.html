@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com partes do HTML (DOM)</title>
+    <style>
+        .button{
+            padding: 30pt;
+            font: 12pt Arial;
+        }
+        p{
+            font: 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button class="button" onclick="entrada()">Clique para começar</button>
+    <p id="resultado">Aqui vai aparecer o resultado...</p>
+    
+    <script>
+        function entrada(){
+            var res = document.getElementById('resultado')            
+            var nome = prompt('Qual é o seu nome?')
+            res.innerHTML = `Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#128125;` // pra usar emoji têm que usar &# e terminar com ;                
+        }
+    </script>
+</body>
+</html>
