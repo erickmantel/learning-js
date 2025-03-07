@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Verificações de formulário: não pode entrar vazio, 0, numero negativo, do maior pro menor tbm alem do menor pro maior que é o padrão -->
+     <!-- Quando entrar com vazio em uma das caixa retornar erro e qual caixa falta o dado -->
+    <header><h1>Título</h1></header>
+    <section>
+        <div>
+            <h1>Vamos contar</h1>
+
+            <p>Inicio: <input id="inicio" type="number"></p>
+            <p>Fim:    <input  id="fim" type="number"></p>
+            <p>Passo:  <input id="passo" type="number"> </p>
+            
+            <p><button onclick="input()">contar</button></p>
+            
+        </div>
+        <div>
+            
+            <p id="output">Aqui fica a contagem</p>
+        </div>
+        
+    </section>                
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
