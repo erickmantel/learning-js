@@ -1,0 +1,29 @@
+
+body{
+    font: 12pt Arial;   
+    background: gray;
+}
+
+button{
+    color: white;
+    background-color: #1877f2;
+    cursor: pointer;
+    border: none;
+    padding: 15px 25px;
+    font-size: 13pt;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;  
+}
+
+.botão:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /*diminui a sombra*/
+    transform: translateY(2px); /* Diminui o botão pra baixo */ 
+}
+
+/*estudar  transition ,transform e o :active que está setado na classe botão ele é um evento em css muito interessante*/
+
+
+
+
+

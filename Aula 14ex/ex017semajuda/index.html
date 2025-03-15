@@ -3,21 +3,25 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Fazer uma tabuada com o numero e um botão para gerar a tabuada completa. foi usado um select em html para dar o output da tabuada.Fazer a validação da tabuada tbm.-->
     <header><h1>Tabuada</h1></header>
     <section>
         <div>
-            <p>Número: 
-            <input id="input" type="number">
-            <button onclick="input()">Gerar Tabuada</button>
-            </p>    
+            <p>
+               Numero: <input id="txtnum" type="number"></input> 
+               <button onclick="input()">Gerar Tabuada</button>
+            </p>   
         </div>
+            <p>
+                <select id="tab" size="10">
+                    <option>Digite um número acima</option>
+                </select>
+            </p>
         <div>
-            <select name="output" id="output">Digite um número acima</select>
+            
         </div>
         
     </section>                

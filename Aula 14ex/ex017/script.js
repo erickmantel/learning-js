@@ -1,14 +1,18 @@
 function input (){
-    let numero = Number(document.getElementById('input').value)
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
     
-    if(numero == 0 || numero < 0){
-        alert('{ERRO] Digite um numero válido, 0 ou numeros negativos não são permitidos!')
+    if(num.value.length == 0){
+        window.alert('{ERRO] Digite um numero válido')
     }else{
+        let n = Number(num.value)
+        tab.innerHTML = ""
         for(c = 1; c <= 10; c++){
-            newnumero = numero * c
-
+            let item = document.createElement('option')//crio o elemento option dentro do select a cada loop
+            item.text = `${n} x ${c} = ${n*c}`//multiplico o numero pelo contador do for até 10 a cada loop
+            tab.appendChild(item)//acesso o objeto tab e crio no html via dom usando o js uma tag filho option já que a var item cria um elemento
         }
     }
-    //console.log(numero)
+
 
 }

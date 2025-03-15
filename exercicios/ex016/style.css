@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+h1{
+    font-family:'Creepster', system-ui; 
+    font-weight: 400; 
+    font-style: normal;
+    color: rgb(0, 161, 8);
+}
+
+
+button{ 
+    font-size: 16px;
+    background-color: rgba(101, 184, 52, 0.911);
+    padding: 15px 32px; /*vertical horizontal*/
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);/*sombra e relevo*/
+    cursor: pointer; /*trasforma o a seta na mãozinha*/
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* Adiciona transições suaves */
+}
+
+.botao:hover {
+    background-color: #3e8e41;
+}
+
+.botao:active {
+    transform: translateY(2px); /* Move o botão um pouco para baixo */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Diminui a sombra */
+}
+
+/*Fazer o botão presionar e despresionar de uma vez ao clicar, ele fica presionado enquanto o alert fica aberto.*/
