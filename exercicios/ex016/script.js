@@ -12,10 +12,17 @@ function input() {
 
         Nasc = Number(anoNasc);
 
-        if (Nasc !== 0 && !isNaN(Nasc)) {
-            break; // Sai do loop se o valor for válido
+        if (Nasc !== 0 && !isNaN(Nasc)) { // se o valor for diferente de 0/vazio e ser um numero valido
+            if (Nasc >= 1900){
+                break; // Sai do loop se o valor for válido
+            }else{
+                alert('Digite uma data acima ou igual a 1900.\nVocê não pode ser tão velho!')
+                //segundo alert
+            }
+            
         } else {
             alert('Digite um número válido');
+            //primerio alert
         }
     }
 
@@ -27,3 +34,5 @@ function input() {
 
     saida.innerHTML = `Quem nasceu em ${Nasc} vai completar <strong>${idade}</strong> anos em <strong>${ano}</strong>`;
 }
+
+//criar um link na página se a pessoa clicar no okay do segundo alert
