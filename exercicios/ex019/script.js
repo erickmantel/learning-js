@@ -1,28 +1,25 @@
-var saida = document.getElementById('saida')
+function calc() {
+    let n1 = Number(prompt('Primeiro valor:'))
+    let n2 = Number(prompt('Segundo valor:'))
+    let op = Number(prompt(`Valores informados: ${n1} e ${n2}. \nO que vamos fazer? \n[1] Somar \n[2] Subtrair \n[3] Multiplicar \n[4] Dividir`))
 
-function input(){    
-    var n1 = Number(prompt('Primeiro valor: '))
-    var n2 = Number(prompt('Segundo valor: '))
-    var escolha = Number(prompt(`Valores informados: ${n1} e ${n2}.\nO que vamos fazer?\n[1]Somar\n[2]Subtrair\n[3]Multiplicar\n[4]Dividir\n`))
-    
-    var resultado
-
-    switch (escolha) {
+    let saida = document.getElementById('saida')
+    saida.innerHTML = `<h2>Calculando...</h2>`
+    switch (op) { // A estrutura switch basicamente permite você testar valores dentro de uma variável ou expressão. Ela é compatível apenas com números inteiros e strings
         case 1:
-            resultado = n1+n2
-        break;
+            saida.innerHTML += `<p>${n1} + ${n2} = <strong>${n1+n2}</strong></p>`
+            break // O break é obrigatório em cada case. Se não for colocado, acontecerá a execução de vários comandos indesejados de outros cases
         case 2:
-            resultado = n1-n2
-        break;
+            saida.innerHTML += `<p>${n1} - ${n2} = <strong>${n1-n2}</strong></p>`
+            break
         case 3:
-            resultado = n1*n2
-        break;
+            saida.innerHTML += `<p>${n1} x ${n2} = <strong>${n1*n2}</strong></p>`
+            break
         case 4:
-            resultado = n1/n2
-        break;
+            saida.innerHTML += `<p>${n1} / ${n2} = <strong>${(n1/n2).toLocaleString('pt-BR')}</strong></p>` // O método toLocaleString() é muito útil para mostrar números de forma mais compatível com o que usamos aqui no Brasil.
+            break
+        default: // Se o usuário não digitar nenhum dos valores acima, vai cair aqui
+            saida.innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${n1} e ${n2}, mas não sei o que fazer com eles. </p>`
+            break
     }
-    saida.innerHTML = `<p><h1>Calculando...</h1></p> <p>${n1} + ${n2} = ${resultado}</p>`
-    /*COlocar validação para só entrar com decimal usando . porque o sistema não aceita virgula*/
 }
-
-/*Ver algumas veriicações*/
