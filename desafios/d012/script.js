@@ -18,15 +18,11 @@ function mudar(){
         output.innerHTML += `Hoje o preço está mais barato.`
         output.innerHTML += `O preço caiu R$ ${precoAnterior-precoAtual} em relação ao preço anterior.`
         
-        //Uma variação de _ por centro pra baixo.
+        // Calculando a porcentagem de redução
+        var percentualReduzido = ((precoAnterior - precoAtual) / precoAnterior) * 100;
+        output.innerHTML += ` A redução foi de ${percentualReduzido.toFixed(2)}%.`
     }else{
-
-    }
-
-
-    (precoAnterior/100) * 
-
     
-
+    }
 
 }
