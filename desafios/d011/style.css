@@ -1,0 +1,108 @@
+/* Estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #e6f7ff, #f0f9ff);
+}
+
+/* Container principal - sem efeito hover */
+body > div {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo do título */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Estilo do parágrafo descritivo */
+p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo do botão com animação */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.25);
+}
+
+/* Efeito hover apenas no botão */
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.35);
+}
+
+/* Estilo das mensagens de resultado */
+p[style*="color: green"],
+p[style*="color: red"] {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Mensagem de sucesso (bissexto) */
+p[style*="color: green"] {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #2ecc71 !important;
+    border-left: 4px solid #2ecc71;
+}
+
+/* Mensagem de erro (não bissexto) */
+p[style*="color: red"] {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c !important;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Estilo para a mensagem de erro de input */
+p[style*="[ERRO]"] {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c !important;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body > div {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
