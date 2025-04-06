@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    font: 12pt Arial;
+    background-color: gray;
+    
+}
+
+h1{
+    font-family: 'Pacifico', cursive; 
+    font-weight: normal;
+}
+ 
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.butao-style{
+    padding: 10px;
+    color: rgba(241, 241, 247, 0.801);
+    background-color: #0866ff;
+    border-radius: 8pt;
+    border: none;
+    font: bold;
+    font-weight: normal;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.butao-style:hover{
+    transform: translateY(-5px); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}

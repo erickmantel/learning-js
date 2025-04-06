@@ -1,10 +1,31 @@
-function contar(){
-    var output = document.getElementsByTagName('p')[0] // acesso a saida
-    
-
-    
+function contagem(){
+    var output = document.getElementById('saida') 
+    let num = Number(document.getElementById('fnum').value)   
+    output.innerHTML += `<h2>Contando de 0 até ${num}</h2>`
+    var c = 0
+    while (c <= num){
+        output.innerHTML += `${c} &#x1F449;`
+        c++
+    }
+    output.innerHTML += ` &#x1F3C1`
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//função de animação do botão
 function apertarButao(){
     var botao = document.querySelector('.b1')
 
@@ -18,7 +39,7 @@ function apertarButao(){
 
         // Outro pequeno atraso antes de exibir o alert
         setTimeout(() => {
-            alert('Oi');
+            
         }, 100); // Tempo suficiente para o botão voltar ao normal antes do alert
     }, 100); // Tempo de animação do clique
 

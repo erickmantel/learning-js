@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 body { font: 12pt Arial; background-color: gray; }
 h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
@@ -10,7 +10,7 @@ p{font-family: 'Times New Roman', Times, serif;}
 
 .b1{
     font-size: 12pt; 
-    padding: 15px;
+    padding: 7px;
     background-color: rgb(82, 189, 21);
     border: none;
     border-radius: 10px;
