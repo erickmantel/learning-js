@@ -62,20 +62,3 @@ function finalizar(){
     }
 }
 
-
-
-
-
-
-
-
-
-/*
-
-Anotações a respeito da lógica do código...
-1° Acesso as variaveis de controle
-2° Estruturas de verificação
-Se numero for menor que 1 e maior que 100 então digite um valor certo
-3° Função adicionar ao clicar no botão adicionar vai adicionar uma option no select com o valor 
-
-*/
