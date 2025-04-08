@@ -1,68 +1,81 @@
-//Acesso a todos os controles 
+//Acesso as variaveis de controle do código
+let output = document.querySelector('div#output')
+let num = document.querySelector('input#num')
+let select = document.querySelector('select#saida')
+let valores = []
 
-var select = document.getElementById('select')
-var output = document.getElementById('output')
-var numeros = []
-
-function adicionar() {
-    var num = Number(document.getElementById('num').value)
-    if (num < 1 || num > 100 || numeros.indexOf(num) !== -1) {//Verificações 
-        alert('[ERRO] Valor invalido ou já encontrado na lista!')
-        return
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){//numero entre 1 e 100 true
+        return true
+    }else{
+        return false
     }
-    numeros.push(num)//Adiciono valor ao array
-    var item = document.createElement('option')//Crio o <option>
-    item.text = `Valor ${num} adicionado.`//Defino o texto dentro do option
-    select.appendChild(item)//Adicono ao <select> a tag filho option criada
+}
+
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){//true se valor não estiver na lista
+        return true
+    }else{
+        return false
+    }
+}
 
 
-    //Não funcinou como no video
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){//se estiver dentro de 1 e 100 e se não estiver na lista = true
+        valores.push(Number(num.value))//Adicionar depois do ultimo indice do array
+        let item = document.createElement('option')//cria a option
+        item.text = `Valor ${num.value} adicionado`//adiciona texto ao option
+        select.appendChild(item)
+        output.innerHTML = ''
+    }else{
+        window.alert('[ERROR] Valor invalido ou já digitado na lista')
+    }
+
     num.value = ''
-    num.focus()
+    num.focus() 
 }
 
-function soma() {
-    return numeros.reduce((acc, val) => acc + val, 0)
-}
 
-function media() {
-    return numeros.length ? soma() / numeros.length : 0
-}
-
-function maiorValor(){
-    return Math.max(...numeros)//O math é um objeto, com o metodo max que retorna o mair valor individual e não como array, pra isso serve o operador ... que individualiza os valores do array numeros[]
-}
-
-function menorValor(){
-    return Math.min(...numeros)//mesma lógica
-}
-
-function finalizar() {
-    //Retornar o total de valores cadastrados .length, o maior valor informado, o menor valor informado, somatoria de todos os valores, a média dos valores digitados
-    
-    //Acesso aos dados de saida dentro da função finalizar
-    var total = numeros.length
-    var maior = maiorValor()
-    var menor = menorValor()
-    var somatorio = soma()
-    var mediaFinal = media()
-
-    if (total == 0 || maior == 0 || menor == 0 || somatorio == 0 || mediaFinal == 0){
-        alert('[ERRO] Adicione um ou mais numeros antes de finalizar!')
-        return
+function finalizar(){
+    if (valores.length == 0){
+        window.alert('Adicione valores antes de finalizar!')
+    }else{
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for (let pos in valores){//estrutura for não entendi bem estudar depois
+            soma += valores[pos]
+            if(valores[pos]>maior)
+                maior = valores[pos]
+            if(valores[pos]<menor)
+                menor = valores[pos]
+        }
+        media = soma / tot
+        output.innerHTML = ''
+        output.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
+        output.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
+        output.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
+        output.innerHTML += `<p>A média dos valores digitados é ${media}`
     }
-
-    
-    //Saida de dados
-    output.innerHTML += `<p>Ao todo, temos ${total} números cadastrados.</p>`
-    output.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
-    output.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
-    output.innerHTML += `<p>Somando todos os valores, temos ${somatorio}</p>`
-    output.innerHTML += `<p>A média dos valores digitados é ${mediaFinal.toFixed(2)}</p>`
-
-    
-
 }
 
 
 
+
+
+
+
+
+
+/*
+
+Anotações a respeito da lógica do código...
+1° Acesso as variaveis de controle
+2° Estruturas de verificação
+Se numero for menor que 1 e maior que 100 então digite um valor certo
+3° Função adicionar ao clicar no botão adicionar vai adicionar uma option no select com o valor 
+
+*/

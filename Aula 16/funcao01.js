@@ -3,10 +3,7 @@ function parimpar(n){
         return 'Par!'
     }else{
         return 'Impar!'
-    }
-    
-    
+    }    
 }
 
-
-console.log(parimpar(223))
+console.log(parimpar(2))
